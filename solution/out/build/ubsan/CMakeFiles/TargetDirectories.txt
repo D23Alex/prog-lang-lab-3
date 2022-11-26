@@ -1,0 +1,3 @@
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/ubsan/CMakeFiles/image-transformer.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/ubsan/CMakeFiles/edit_cache.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/ubsan/CMakeFiles/rebuild_cache.dir
