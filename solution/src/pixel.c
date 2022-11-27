@@ -1,1 +1,0 @@
-struct pixel { uint8_t b, g, r; };

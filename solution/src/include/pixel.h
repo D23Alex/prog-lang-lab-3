@@ -1,1 +1,0 @@
-typedef struct pixel pixel;
