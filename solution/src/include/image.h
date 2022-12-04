@@ -8,3 +8,6 @@ typedef struct image {
 typedef struct pixel {
     uint8_t b, g, r;
 } pixel;
+
+struct image * create_image(uint64_t height, uint64_t width);
+uint8_t get_padding(uint32_t width);

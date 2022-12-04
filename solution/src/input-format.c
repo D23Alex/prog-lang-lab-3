@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <include/bmp.h>
 #include <include/image.h>
+#include <include/rotate.h>
 
 typedef struct bmp_header bmp_header;
 
@@ -31,9 +32,9 @@ struct header {
     bmp_header bmpHeader;
 };
 
-//TODO: на открытых файлах они могут запускать from_bmp и to_bmp
-enum open_status open_bmp(FILE* in) {
-    if (fopen((const char *) in, "rb") != NULL) {
+//TODO: на открытых файлах они могут запускать from_bmp и to_bmp?
+enum open_status open_bmp(FILE* file) {
+    if (fopen((const char *) file, "r+") != NULL) {
         int status = OPEN_OK;
         return status;
     } else {
@@ -75,6 +76,7 @@ struct header read_header(FILE* in) {
 
 //FIXME убрать заглушки
 struct bmp_header set_header(uint64_t width, uint64_t height) {
+    int padding = get_padding(width);
     bmp_header bmpHeader;
     bmpHeader.bfType = 0x4D42;
     bmpHeader.bfileSize = width * sizeof(pixel) + sizeof(bmpHeader) + height;
@@ -86,7 +88,7 @@ struct bmp_header set_header(uint64_t width, uint64_t height) {
     bmpHeader.biPlanes = 1;
     bmpHeader.biBitCount = 24;
     bmpHeader.biCompression = 0;
-    bmpHeader.biSizeImage;
+    bmpHeader.biSizeImage = (width + padding) * height;
     bmpHeader.biXPelsPerMeter = 0;
     bmpHeader.biYPelsPerMeter = 0;
     bmpHeader.biClrUsed = 0;
@@ -94,8 +96,6 @@ struct bmp_header set_header(uint64_t width, uint64_t height) {
     return bmpHeader;
 
 }
-
-
 
 enum read_status from_bmp( FILE* in, struct image* img ) {
     if (img == NULL) {
@@ -107,10 +107,45 @@ enum read_status from_bmp( FILE* in, struct image* img ) {
        } else {
            bmp_header bmpHeader = header.bmpHeader;
 
+           img = create_image(header.bmpHeader.biHeight, header.bmpHeader.biWidth);
+           uint8_t padding = get_padding(img -> width);
+           for (int offset = 0; offset < img -> width * img -> height; offset++) {
+               fread(img -> data + offset, sizeof (struct pixel), 1, in);
+               //FIXME
+               img -> data += padding;
+           }
+           return READ_OK;
        }
     }
 }
+//FIXME: файл нужно открыть
+enum write_status to_bmp( FILE* out, struct image* img ) {
+    bmp_header bmpHeader = set_header(img->width, img ->height);
 
-enum write_status to_bmp( FILE* out, struct image const* img ) {
+    int padding = get_padding(img -> width);
 
+    int writeStatus = fwrite(&bmpHeader, sizeof (struct bmp_header), 1, out);
+    if (!writeStatus) {
+        return WRITE_ERROR;
+    } else {
+        writeStatus = fseek(out, bmpHeader.bOffBits, SEEK_SET);
+        if (writeStatus) {
+            return WRITE_ERROR;
+        } else {
+            for (uint64_t i = 0; i < img -> height; i++) {
+                uint64_t size = sizeof (struct pixel) * img -> width;
+                struct pixel * bitmapArray  = img -> data + img -> width * i;
+                writeStatus = fwrite(bitmapArray, size, 1, out);
+                if (!writeStatus) {
+                    return WRITE_ERROR;
+                } else {
+                    writeStatus = fwrite(img -> data, padding, 1, out);
+                    if (padding != 0 && !writeStatus) {
+                        return WRITE_ERROR;
+                    }
+                }
+            }
+        }
+    }
+    return WRITE_OK;
 }
