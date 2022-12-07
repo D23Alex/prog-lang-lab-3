@@ -1,5 +1,10 @@
-#include <stdint-gcc.h>
 #include <include/image.h>
+#include <include/bmp.h>
+
+typedef struct header {
+    bmp_header bmpHeader;
+    int valid;
+} header;
 
 enum read_status {
     READ_OK = 0,
@@ -19,9 +24,9 @@ enum close_status {
     CLOSE_ERROR
 };
 
-FILE* open_bmp(char* fileName, char* openMode);
+FILE* open_bmp(const char* fileName, char* openMode);
 enum close_status close_bmp(FILE* in);
-struct header read_header(FILE* in);
-struct bmp_header set_header(uint64_t width, uint64_t height);
-enum read_status from_bmp( FILE* in, struct image* img );
-enum write_status to_bmp( FILE* out, struct image* img );
+header read_header(FILE* in);
+bmp_header set_header(uint64_t width, uint64_t height);
+enum read_status from_bmp( FILE* in, image* img );
+enum write_status to_bmp( FILE* out, image* img );

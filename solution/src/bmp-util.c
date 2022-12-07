@@ -1,20 +1,11 @@
 #include <stdio.h>
-#include <include/bmp.h>
-#include <include/image.h>
 #include <include/bmp-util.h>
 
 #define OPEN_ERROR_CODE 0xDEAD
 
-typedef struct bmp_header bmp_header;
-
-typedef struct header {
-    bmp_header bmpHeader;
-    int valid;
-} header;
-
 FILE* open_bmp(const char* fileName, char* openMode) {
     FILE* file;
-    file = fopen(fileName, "");
+    file = fopen(fileName, openMode);
     if (file != NULL ) {
         return file;
     } else {
@@ -30,22 +21,25 @@ enum close_status close_bmp(FILE* in) {
     }
 }
 
-struct header read_header(FILE* in) {
+header read_header(FILE* in) {
     bmp_header bmpHeader;
     if (fread(&bmpHeader, sizeof bmpHeader, 1, in) != 1) {
-        return (struct header) {
-            .valid = 0,
-            .bmpHeader = bmpHeader
+        header header = {
+                .valid = 0,
+                .bmpHeader = bmpHeader
         };
+        return header;
     } else {
-        return (struct header) {
-            .valid = 1,
-            .bmpHeader = bmpHeader
+        header header = {
+                .valid = 1,
+                .bmpHeader = bmpHeader
         };
-    }
-};
 
-struct bmp_header set_header(uint64_t width, uint64_t height) {
+        return header;
+    }
+}
+
+bmp_header set_header(uint64_t width, uint64_t height) {
     int padding = get_padding(width);
     bmp_header bmpHeader;
     bmpHeader.bfType = 0x4D42;
@@ -66,7 +60,7 @@ struct bmp_header set_header(uint64_t width, uint64_t height) {
     return bmpHeader;
 }
 
-enum read_status from_bmp(FILE* in, struct image* img) {
+enum read_status from_bmp(FILE* in, image* img) {
     if (img == NULL) {
         return READ_INVALID_IMG;
     }
@@ -99,7 +93,7 @@ enum read_status from_bmp(FILE* in, struct image* img) {
     return READ_OK;
 }
 
-enum write_status to_bmp(FILE* out, struct image* img) {
+enum write_status to_bmp(FILE* out, image* img) {
     bmp_header bmpHeader = set_header(img -> width, img->height);
     fwrite(&bmpHeader, sizeof(bmpHeader), 1, out);
 

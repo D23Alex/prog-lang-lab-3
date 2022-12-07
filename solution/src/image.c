@@ -16,12 +16,12 @@ struct image create_image(uint64_t height, uint64_t width) {
             height = height
     };
 
-    void* data = malloc(width * height * (sizeof(struct pixel)));
+    void* data = malloc(width * height * (sizeof(pixel)));
 
     if (data == NULL) {
-        return ((struct image) {
+        return (struct image) {
             0, 0, 0 //some kind of error code
-        });
+        };
     } else {
        image.data = data;
         return image;

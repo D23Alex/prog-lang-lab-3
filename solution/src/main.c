@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <include/bmp-util.h>
 #include <include/rotate.h>
-#include <include/image.h>
 #include <stdlib.h>
 
 int main( int argc, char** argv ) {
@@ -18,7 +17,7 @@ int main( int argc, char** argv ) {
     if (status != READ_OK) {
         printf("An error occurred while opening the BMP file! Reason: %d", status);
         exit(-1);
-    };
+    }
 
     image rotatedImage = rotate(&plainImage);
     FILE* fileRotated = open_bmp("result.bmp", "w");

@@ -1,7 +1,7 @@
 #include <include/image.h>
 #include <stdlib.h>
 
-struct image rotate(struct image* source ) {
+image rotate(image* source ) {
     image result = create_image(source -> height, source -> width);
 
     result . height = source -> width;
