@@ -1,37 +1,20 @@
 #include <stdio.h>
 #include <include/bmp.h>
 #include <include/image.h>
+#include <include/bmp-util.h>
 
 #define OPEN_ERROR_CODE 0xDEAD
 
 typedef struct bmp_header bmp_header;
-
-enum read_status  {
-    READ_OK = 0,
-    READ_INVALID_SIGNATURE,
-    READ_INVALID_HEADER,
-    READ_INVALID_BITS,
-    READ_INVALID_IMG
-};
-
-enum write_status  {
-    WRITE_OK = 0,
-    WRITE_ERROR
-};
-
-enum close_status {
-    CLOSE_OK = 0,
-    CLOSE_ERROR
-};
 
 typedef struct header {
     bmp_header bmpHeader;
     int valid;
 } header;
 
-FILE * open_bmp(const char* fileName) {
+FILE* open_bmp(const char* fileName, char* openMode) {
     FILE* file;
-    file = fopen(fileName, "rb");
+    file = fopen(fileName, "");
     if (file != NULL ) {
         return file;
     } else {
