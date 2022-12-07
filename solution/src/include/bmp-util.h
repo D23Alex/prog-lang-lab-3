@@ -1,4 +1,5 @@
 #include <stdint-gcc.h>
+#include <include/image.h>
 
 enum read_status {
     READ_OK = 0,
@@ -9,7 +10,7 @@ enum write_status;
 enum open_status;
 enum close_status;
 
-enum FILE* open_bmp(FILE* file);
+enum FILE* open_bmp(char* fileName);
 enum close_status close_bmp(FILE* in);
 struct header read_header(FILE* in);
 struct bmp_header set_header(uint64_t width, uint64_t height);
