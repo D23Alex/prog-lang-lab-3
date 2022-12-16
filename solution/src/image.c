@@ -10,21 +10,21 @@ uint8_t get_padding(uint32_t width) {
     return padding;
 }
 
-struct image create_image(uint64_t height, uint64_t width) {
-    image image = {
-            width = width,
-            height = height
-    };
+image * create_image(uint64_t height, uint64_t width) {
+    image* plainImage = malloc(sizeof(image));
 
-    void* data = malloc(width * height * (sizeof(pixel)));
+    plainImage -> width = width;
+    plainImage -> height = height;
+
+    void* data = malloc(sizeof(pixel) * width * height);
 
     if (data == NULL) {
-        return (struct image) {
-            0, 0, 0 //some kind of error code
-        };
+        image* brokenImage = NULL;
+        return brokenImage;
     } else {
-       image.data = data;
-        return image;
+        plainImage -> data = data;
+        return plainImage;
     }
+
 }
 

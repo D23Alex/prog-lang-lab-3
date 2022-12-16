@@ -49,15 +49,15 @@ cmake_ninja_workdir = C$:/Users/chesn/CLionProjects/assignment-3-image-rotation/
 
 build cmake_object_order_depends_target_image-transformer: phony || CMakeFiles/image-transformer.dir
 
-build CMakeFiles/image-transformer.dir/src/inner-format.obj: C_COMPILER__image-transformer_Release C$:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/inner-format.c || cmake_object_order_depends_target_image-transformer
-  DEP_FILE = CMakeFiles\image-transformer.dir\src\inner-format.obj.d
+build CMakeFiles/image-transformer.dir/src/bmp-util.obj: C_COMPILER__image-transformer_Release C$:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/bmp-util.c || cmake_object_order_depends_target_image-transformer
+  DEP_FILE = CMakeFiles\image-transformer.dir\src\bmp-util.obj.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/include
   OBJECT_DIR = CMakeFiles\image-transformer.dir
   OBJECT_FILE_DIR = CMakeFiles\image-transformer.dir\src
 
-build CMakeFiles/image-transformer.dir/src/input-format.obj: C_COMPILER__image-transformer_Release C$:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/input-format.c || cmake_object_order_depends_target_image-transformer
-  DEP_FILE = CMakeFiles\image-transformer.dir\src\input-format.obj.d
+build CMakeFiles/image-transformer.dir/src/image.obj: C_COMPILER__image-transformer_Release C$:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/image.c || cmake_object_order_depends_target_image-transformer
+  DEP_FILE = CMakeFiles\image-transformer.dir\src\image.obj.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/include
   OBJECT_DIR = CMakeFiles\image-transformer.dir
@@ -70,15 +70,8 @@ build CMakeFiles/image-transformer.dir/src/main.obj: C_COMPILER__image-transform
   OBJECT_DIR = CMakeFiles\image-transformer.dir
   OBJECT_FILE_DIR = CMakeFiles\image-transformer.dir\src
 
-build CMakeFiles/image-transformer.dir/src/pixel.obj: C_COMPILER__image-transformer_Release C$:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/pixel.c || cmake_object_order_depends_target_image-transformer
-  DEP_FILE = CMakeFiles\image-transformer.dir\src\pixel.obj.d
-  FLAGS = -O3 -DNDEBUG
-  INCLUDES = -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/include
-  OBJECT_DIR = CMakeFiles\image-transformer.dir
-  OBJECT_FILE_DIR = CMakeFiles\image-transformer.dir\src
-
-build CMakeFiles/image-transformer.dir/src/transformation.obj: C_COMPILER__image-transformer_Release C$:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/transformation.c || cmake_object_order_depends_target_image-transformer
-  DEP_FILE = CMakeFiles\image-transformer.dir\src\transformation.obj.d
+build CMakeFiles/image-transformer.dir/src/rotate.obj: C_COMPILER__image-transformer_Release C$:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/rotate.c || cmake_object_order_depends_target_image-transformer
+  DEP_FILE = CMakeFiles\image-transformer.dir\src\rotate.obj.d
   FLAGS = -O3 -DNDEBUG
   INCLUDES = -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/include
   OBJECT_DIR = CMakeFiles\image-transformer.dir
@@ -92,7 +85,7 @@ build CMakeFiles/image-transformer.dir/src/transformation.obj: C_COMPILER__image
 #############################################
 # Link the executable image-transformer.exe
 
-build image-transformer.exe: C_EXECUTABLE_LINKER__image-transformer_Release CMakeFiles/image-transformer.dir/src/inner-format.obj CMakeFiles/image-transformer.dir/src/input-format.obj CMakeFiles/image-transformer.dir/src/main.obj CMakeFiles/image-transformer.dir/src/pixel.obj CMakeFiles/image-transformer.dir/src/transformation.obj
+build image-transformer.exe: C_EXECUTABLE_LINKER__image-transformer_Release CMakeFiles/image-transformer.dir/src/bmp-util.obj CMakeFiles/image-transformer.dir/src/image.obj CMakeFiles/image-transformer.dir/src/main.obj CMakeFiles/image-transformer.dir/src/rotate.obj
   FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\image-transformer.dir

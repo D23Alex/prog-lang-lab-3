@@ -14,11 +14,10 @@ endif()
 # sources at CMakeLists.txt:2 (file)
 file(GLOB_RECURSE NEW_GLOB FOLLOW_SYMLINKS LIST_DIRECTORIES false "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/*.c")
 set(OLD_GLOB
-  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/inner-format.c"
-  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/input-format.c"
+  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/bmp-util.c"
+  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/image.c"
   "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/main.c"
-  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/pixel.c"
-  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/transformation.c"
+  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/rotate.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -28,11 +27,10 @@ endif()
 # sources at CMakeLists.txt:2 (file)
 file(GLOB_RECURSE NEW_GLOB FOLLOW_SYMLINKS LIST_DIRECTORIES false "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/*.h")
 set(OLD_GLOB
+  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/include/bmp-util.h"
   "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/include/bmp.h"
-  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/include/inner-format.h"
-  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/include/input-format.h"
-  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/include/pixel.h"
-  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/include/transformation.h"
+  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/include/image.h"
+  "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src/include/rotate.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

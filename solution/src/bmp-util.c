@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <include/bmp-util.h>
 
 #define OPEN_ERROR_CODE 0xDEAD
@@ -61,7 +62,8 @@ bmp_header set_header(uint64_t width, uint64_t height) {
 }
 
 enum read_status from_bmp(FILE* in, image* img) {
-    if (img == NULL) {
+    if (img == NULL || ((img->width == 0xDEAD) && (img->height == 0xDEAD))) {
+        puts("The input of the function was a broken image!");
         return READ_INVALID_IMG;
     }
 
@@ -74,17 +76,20 @@ enum read_status from_bmp(FILE* in, image* img) {
         img->width = bmpHeader.biWidth;
         img->height = bmpHeader.biHeight;
 
-        if (fseek(in, bmpHeader.bOffBits, SEEK_SET) != 0) {
+        img->data = malloc(sizeof (pixel) * img -> width * img -> height);
+        if (fseek(in, (long) bmpHeader.bOffBits, SEEK_SET) != 0) {
             return READ_INVALID_SIGNATURE;
         }
 
-        if (bmpHeader . biBitCount != 24) {
+        if (bmpHeader.biBitCount != 24) {
             return READ_INVALID_BITS;
         }
 
         uint8_t padding = get_padding(bmpHeader.biWidth);
-        for (uint32_t y = 0; y < bmpHeader . biHeight; y++) {
-            fread(img -> data + y * bmpHeader . biWidth, sizeof(pixel), bmpHeader.biWidth, in);
+        for (uint32_t y = 0; y < bmpHeader.biHeight; y++) {
+            if (!fread(img -> data + y * bmpHeader.biWidth, sizeof (pixel) * bmpHeader.biWidth, 1, in)) {
+                return READ_INVALID_BITS;
+            }
             fseek(in, padding, SEEK_CUR);
         }
     } else {
@@ -93,16 +98,20 @@ enum read_status from_bmp(FILE* in, image* img) {
     return READ_OK;
 }
 
+//FIXME!!!
+//TODO: где нужно освободить память при ошибке?
 enum write_status to_bmp(FILE* out, image* img) {
     bmp_header bmpHeader = set_header(img -> width, img->height);
     fwrite(&bmpHeader, sizeof(bmpHeader), 1, out);
 
     uint8_t padding = get_padding(bmpHeader.biWidth);
-    for (uint32_t y = 0; y < bmpHeader . biHeight; y++) {
-        fread(img -> data + y * bmpHeader . biWidth, sizeof(pixel), bmpHeader.biWidth, out);
-        fseek(out, padding, SEEK_CUR);
+    for (uint32_t y = 0; y < bmpHeader.biHeight; y++) {
+        if (!fwrite(img -> data + img -> width * y, sizeof(pixel), img->width, out)) {
+            puts("An error occurred while writing bmp image data!");
+            return WRITE_ERROR;
+        }
     }
-
+    puts("The image has been successfully rotated!");
     return WRITE_OK;
 
 }

@@ -8,6 +8,7 @@
       <configuration PROFILE_NAME="LSan" ENABLED="true" GENERATION_DIR="out/build/lsan" CONFIG_NAME="LSan" GENERATION_OPTIONS="-G Ninja -DCMAKE_BUILD_TYPE=LSan" />
       <configuration PROFILE_NAME="MSan" ENABLED="true" GENERATION_DIR="out/build/msan" CONFIG_NAME="MSan" GENERATION_OPTIONS="-G Ninja -DCMAKE_BUILD_TYPE=MSan" />
       <configuration PROFILE_NAME="UBSan" ENABLED="true" GENERATION_DIR="out/build/ubsan" CONFIG_NAME="UBSan" GENERATION_OPTIONS="-G Ninja -DCMAKE_BUILD_TYPE=UBSan" />
+      <configuration PROFILE_NAME="Debug-Coverage" ENABLED="true" CONFIG_NAME="Debug" GENERATION_OPTIONS="-G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage" />
     </configurations>
   </component>
 </project>
