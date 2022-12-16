@@ -1,0 +1,65 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "check::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check-Release-308c5a0ccc0f90b5e28b.json",
+					"name" : "check",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "image-matcher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-image-matcher-Release-ed1d2e5b68722b358f44.json",
+					"name" : "image-matcher",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/out/build/release",
+		"source" : "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

@@ -111,6 +111,7 @@ enum write_status to_bmp(FILE* out, image* img) {
             return WRITE_ERROR;
         }
     }
+    fflush(out);
     puts("The image has been successfully rotated!");
     return WRITE_OK;
 

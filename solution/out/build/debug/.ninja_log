@@ -1,7 +1,7 @@
 # ninja log v5
 2	26	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/debug/CMakeFiles/cmake.verify_globs	b48b4f8069e2a227
 5	94	6929062721850793	CMakeFiles/image-transformer.dir/src/image.obj	30727120d0d890e8
-43	529	6929065328037250	build.ninja	c89ce6b7baa87a25
+43	529	6929139616903194	build.ninja	c89ce6b7baa87a25
 2	92	6929065081799750	CMakeFiles/image-transformer.dir/src/bmp-util.obj	a6ad91dc07f92b17
 93	207	6929065082890192	image-transformer.exe	3634b16869bbaf2c
 9	78	6929065081645107	CMakeFiles/image-transformer.dir/src/rotate.obj	c31a6038446b048c

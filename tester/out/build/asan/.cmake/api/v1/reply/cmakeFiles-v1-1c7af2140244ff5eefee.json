@@ -16,7 +16,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug-coverage/CMakeFiles/3.23.2/CMakeSystem.cmake"
+			"path" : "out/build/asan/CMakeFiles/3.23.2/CMakeSystem.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -265,7 +265,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug-coverage/CMakeFiles/3.23.2/CMakeCCompiler.cmake"
+			"path" : "out/build/asan/CMakeFiles/3.23.2/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -504,7 +504,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug-coverage/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake"
+			"path" : "out/build/asan/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -578,7 +578,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug-coverage/CMakeFiles/3.23.2/CMakeRCCompiler.cmake"
+			"path" : "out/build/asan/CMakeFiles/3.23.2/CMakeRCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -657,7 +657,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug-coverage/CMakeFiles/3.23.2/CMakeCCompiler.cmake"
+			"path" : "out/build/asan/CMakeFiles/3.23.2/CMakeCCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -756,7 +756,7 @@
 		},
 		{
 			"isGenerated" : true,
-			"path" : "cmake-build-debug-coverage/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake"
+			"path" : "out/build/asan/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -767,8 +767,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/cmake-build-debug-coverage",
-		"source" : "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution"
+		"build" : "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/out/build/asan",
+		"source" : "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester"
 	},
 	"version" : 
 	{

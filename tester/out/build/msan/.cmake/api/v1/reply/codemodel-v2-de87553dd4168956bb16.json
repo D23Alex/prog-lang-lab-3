@@ -1,0 +1,65 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-MSan-d0094a50bb2071803777.json",
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "MSan",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "check::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-check-MSan-5cb789b25779be99ffaa.json",
+					"name" : "check",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "image-matcher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-image-matcher-MSan-6b8cc6ce578a9375438a.json",
+					"name" : "image-matcher",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/out/build/msan",
+		"source" : "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
