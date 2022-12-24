@@ -1,0 +1,124 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-LSan-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "solution",
+					"jsonFile" : "directory-solution-LSan-4d5c66cda7ea3654fe66.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "solution",
+					"targetIndexes" : 
+					[
+						2
+					]
+				},
+				{
+					"build" : "tester",
+					"jsonFile" : "directory-tester-LSan-d50fde0d8ab56c91c81c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "tester",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "LSan",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						2
+					],
+					"name" : "image-transformer",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "assignment-3-image-rotation",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "check::@2d3ea729871aefd03561",
+					"jsonFile" : "target-check-LSan-c16a74b03c90a5586e8a.json",
+					"name" : "check",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "image-matcher::@2d3ea729871aefd03561",
+					"jsonFile" : "target-image-matcher-LSan-b647d6ac5d97d17a743f.json",
+					"name" : "image-matcher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "image-transformer::@e5e88c50852dbdcc79dc",
+					"jsonFile" : "target-image-transformer-LSan-2654676c1aeb2a1ea9ac.json",
+					"name" : "image-transformer",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage",
+		"source" : "C:/Users/chesn/CLionProjects/assignment-3-image-rotation"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

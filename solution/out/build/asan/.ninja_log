@@ -1,0 +1,14 @@
+# ninja log v5
+2	27	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/asan/CMakeFiles/cmake.verify_globs	7438763a701126e2
+7	115	6935252186425555	CMakeFiles/image-transformer.dir/src/rotate.obj	de192b0f63669c2a
+0	117	6935252186425555	CMakeFiles/image-transformer.dir/src/image.obj	ffe6f0e9922b05bf
+10	123	6935252186504193	CMakeFiles/image-transformer.dir/src/main.obj	136d02707e86b117
+4	131	6935252186589842	CMakeFiles/image-transformer.dir/src/bmp-util.obj	aa46698b3bd8528
+131	248	6935252187727249	image-transformer.exe	47b7f5f21e088791
+2	24	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/asan/CMakeFiles/cmake.verify_globs	7438763a701126e2
+1	29	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/asan/CMakeFiles/cmake.verify_globs	7438763a701126e2
+1	21	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/asan/CMakeFiles/cmake.verify_globs	7438763a701126e2
+1	24	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/asan/CMakeFiles/cmake.verify_globs	7438763a701126e2
+2	26	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/asan/CMakeFiles/cmake.verify_globs	7438763a701126e2
+2	23	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/asan/CMakeFiles/cmake.verify_globs	7438763a701126e2
+1	19	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/out/build/asan/CMakeFiles/cmake.verify_globs	7438763a701126e2

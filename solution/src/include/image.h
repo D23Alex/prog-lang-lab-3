@@ -9,5 +9,5 @@ typedef struct image {
     pixel* data;
 } image;
 
-image * create_image(uint64_t height, uint64_t width);
+struct image* create_image(uint64_t height, uint64_t width);
 uint8_t get_padding(uint32_t width);

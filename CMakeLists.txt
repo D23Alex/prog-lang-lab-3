@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-
+set(CMAKE_BUILD_TYPE LSan)
 project(image-transformer LANGUAGES C)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -7,7 +7,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 if(CMAKE_C_COMPILER_ID STREQUAL GNU)
     set(CMAKE_CONFIGURATION_TYPES Debug Release ASan LSan UBSan)
 elseif(CMAKE_C_COMPILER_ID MATCHES Clang)
-    set(CMAKE_CONFIGURATION_TYPES Debug Release ASan LSan MSan UBSan)
+        set(CMAKE_CONFIGURATION_TYPES Debug Release ASan LSan MSan UBSan)
 elseif(MSVC)
     set(CMAKE_CONFIGURATION_TYPES Debug Release ASan)
 endif()

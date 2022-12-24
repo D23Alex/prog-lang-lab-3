@@ -10,7 +10,7 @@ uint8_t get_padding(uint32_t width) {
     return padding;
 }
 
-image * create_image(uint64_t height, uint64_t width) {
+struct image* create_image(uint64_t height, uint64_t width) {
     image* plainImage = malloc(sizeof(image));
 
     plainImage -> width = width;

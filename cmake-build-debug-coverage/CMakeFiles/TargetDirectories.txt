@@ -1,0 +1,12 @@
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/CMakeFiles/test.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/solution/CMakeFiles/image-transformer.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/solution/CMakeFiles/test.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/solution/CMakeFiles/edit_cache.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/solution/CMakeFiles/rebuild_cache.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/tester/CMakeFiles/image-matcher.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/tester/CMakeFiles/check.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/tester/CMakeFiles/test.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/tester/CMakeFiles/edit_cache.dir
+C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/tester/CMakeFiles/rebuild_cache.dir

@@ -25,13 +25,14 @@ int main( int  argc, char** argv ) {
         exit(-2);
     }
 
-    char* outputFilePath = "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\output.bmp";
-    image* rotatedImage = rotate(plainImage);
+    char* outputFilePath = "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\output1.bmp";
+//    image* rotatedImage = rotate(plainImage);
     FILE* fileRotated = open_bmp(outputFilePath, "r+");
-    to_bmp(fileRotated, rotatedImage);
+
+    to_bmp(fileRotated, plainImage);
 
     close_bmp(bmpImage);
-    close_bmp(fileRotated);
+//    close_bmp(fileRotated);
 
     return 0;
 }

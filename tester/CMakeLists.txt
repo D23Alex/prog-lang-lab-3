@@ -8,7 +8,7 @@ add_executable(image-matcher ${sources})
 target_include_directories(image-matcher PRIVATE src include)
 
 file(GLOB test_directories CONFIGURE_DEPENDS tests/*)
-list(FILTER test_directories EXCLUDE REGEX ".*/\.gitignore")
+list(FILTER test_directories EXCLUDE REGEX ".*/.gitignore")
 
 foreach(test_dir IN LISTS test_directories)
     string(REPLACE "/" ";" name_components ${test_dir})

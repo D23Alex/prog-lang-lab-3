@@ -1,0 +1,42 @@
+[
+{
+  "directory": "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage",
+  "command": "C:\\mingw32\\bin\\gcc.exe -D_CRT_SECURE_NO_WARNINGS -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/include -std=c17 -pedantic -Wall -Werror -ggdb -g -fsanitize=leak -o solution\\CMakeFiles\\image-transformer.dir\\src\\bmp-util.c.obj -c C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\bmp-util.c",
+  "file": "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\bmp-util.c"
+},
+{
+  "directory": "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage",
+  "command": "C:\\mingw32\\bin\\gcc.exe -D_CRT_SECURE_NO_WARNINGS -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/include -std=c17 -pedantic -Wall -Werror -ggdb -g -fsanitize=leak -o solution\\CMakeFiles\\image-transformer.dir\\src\\image.c.obj -c C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\image.c",
+  "file": "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\image.c"
+},
+{
+  "directory": "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage",
+  "command": "C:\\mingw32\\bin\\gcc.exe -D_CRT_SECURE_NO_WARNINGS -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/include -std=c17 -pedantic -Wall -Werror -ggdb -g -fsanitize=leak -o solution\\CMakeFiles\\image-transformer.dir\\src\\main.c.obj -c C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\main.c",
+  "file": "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\main.c"
+},
+{
+  "directory": "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage",
+  "command": "C:\\mingw32\\bin\\gcc.exe -D_CRT_SECURE_NO_WARNINGS -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/solution/include -std=c17 -pedantic -Wall -Werror -ggdb -g -fsanitize=leak -o solution\\CMakeFiles\\image-transformer.dir\\src\\rotate.c.obj -c C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\rotate.c",
+  "file": "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\rotate.c"
+},
+{
+  "directory": "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage",
+  "command": "C:\\mingw32\\bin\\gcc.exe -D_CRT_SECURE_NO_WARNINGS -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/include -std=c17 -pedantic -Wall -Werror -ggdb -g -fsanitize=leak -o tester\\CMakeFiles\\image-matcher.dir\\src\\bmp.c.obj -c C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\tester\\src\\bmp.c",
+  "file": "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\tester\\src\\bmp.c"
+},
+{
+  "directory": "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage",
+  "command": "C:\\mingw32\\bin\\gcc.exe -D_CRT_SECURE_NO_WARNINGS -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/include -std=c17 -pedantic -Wall -Werror -ggdb -g -fsanitize=leak -o tester\\CMakeFiles\\image-matcher.dir\\src\\file_cmp.c.obj -c C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\tester\\src\\file_cmp.c",
+  "file": "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\tester\\src\\file_cmp.c"
+},
+{
+  "directory": "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage",
+  "command": "C:\\mingw32\\bin\\gcc.exe -D_CRT_SECURE_NO_WARNINGS -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/include -std=c17 -pedantic -Wall -Werror -ggdb -g -fsanitize=leak -o tester\\CMakeFiles\\image-matcher.dir\\src\\main.c.obj -c C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\tester\\src\\main.c",
+  "file": "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\tester\\src\\main.c"
+},
+{
+  "directory": "C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage",
+  "command": "C:\\mingw32\\bin\\gcc.exe -D_CRT_SECURE_NO_WARNINGS -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/src -IC:/Users/chesn/CLionProjects/assignment-3-image-rotation/tester/include -std=c17 -pedantic -Wall -Werror -ggdb -g -fsanitize=leak -o tester\\CMakeFiles\\image-matcher.dir\\src\\util.c.obj -c C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\tester\\src\\util.c",
+  "file": "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\tester\\src\\util.c"
+}
+]

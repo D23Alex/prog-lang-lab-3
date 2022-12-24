@@ -1,0 +1,5 @@
+"C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2022.2.4/bin/ninja/win/ninja.exe" -G Ninja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_FLAGS=--coverage -DCMAKE_C_FLAGS=--coverage -S C:\Users\chesn\CLionProjects\assignment-3-image-rotation -B C:\Users\chesn\CLionProjects\assignment-3-image-rotation\cmake-build-debug-coverage
+-- Clang-tidy: CLANG_TIDY-NOTFOUND
+-- Configuring done
+-- Generating done
+-- Build files have been written to: C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage

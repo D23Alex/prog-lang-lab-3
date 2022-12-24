@@ -1,0 +1,13 @@
+# ninja log v5
+2	21	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/CMakeFiles/cmake.verify_globs	b449beb9ce4cfde6
+0	194	6935244535168710	solution/CMakeFiles/image-transformer.dir/src/image.c.obj	fb7e9651e8dc3da8
+14	196	6935244535175003	tester/CMakeFiles/image-matcher.dir/src/file_cmp.c.obj	f89b4d65a66e2b9c
+7	198	6935244535168710	solution/CMakeFiles/image-transformer.dir/src/rotate.c.obj	6fa1bda54c52148a
+11	199	6935244535185021	tester/CMakeFiles/image-matcher.dir/src/bmp.c.obj	f9c7101ba52217e5
+3	200	6935244535193498	solution/CMakeFiles/image-transformer.dir/src/main.c.obj	9e846972b6a9379d
+1	20	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/CMakeFiles/cmake.verify_globs	b449beb9ce4cfde6
+2	71	6935244958634733	solution/CMakeFiles/image-transformer.dir/src/bmp-util.c.obj	4324f362439de577
+11	75	6935244958643060	tester/CMakeFiles/image-matcher.dir/src/main.c.obj	be32b9b2853613da
+8	90	6935244958840775	tester/CMakeFiles/image-matcher.dir/src/util.c.obj	8c284f7948414d4b
+1	19	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/CMakeFiles/cmake.verify_globs	b449beb9ce4cfde6
+1	18	0	C:/Users/chesn/CLionProjects/assignment-3-image-rotation/cmake-build-debug-coverage/CMakeFiles/cmake.verify_globs	b449beb9ce4cfde6
