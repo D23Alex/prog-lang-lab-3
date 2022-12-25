@@ -1,38 +1,58 @@
-#include <stdio.h>
 #include <include/bmp-util.h>
 #include <include/rotate.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-int main( int  argc, char** argv ) {
-//    if (argc != 3) {
-//        return -1;
-//    }
 
-    image * plainImage = create_image(0, 0);
+void describe_read_status(enum read_status status) {
+    if (status == READ_OK)
+        fprintf(stdout, "All good");
+    else
+        fprintf(stdout, "Some wrong");
+}
 
+void describe_write_status(enum write_status status) {
+    if (status == WRITE_OK)
+        fprintf(stdout, "All good");
+    else
+        fprintf(stdout, "Some wrong");
+}
 
-    char * filePath = "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\input.bmp";
-    FILE* bmpImage = open_bmp(filePath, "rb");
+int main(int  argc, char** argv ) {
+    if (argc != 3) {
+        fprintf(stderr, "Some wrong");
+        return -1;
+    }
 
-    if ((int) bmpImage == 0xDEAD) {
-        puts("Cannot read a file!");
+    image plainImage;
+    char * filePath = argv[1];
+    FILE * bmpImage = fopen(filePath, "rb");
+    if (bmpImage == NULL)
+        return -1;
+
+    enum read_status readStatus = from_bmp(bmpImage, &plainImage);
+    if (readStatus != READ_OK) {
+        fprintf(stderr,"An error occurred while opening the BMP file! Reason:");
+        describe_read_status(readStatus);
         exit(-2);
     }
 
-    int status = from_bmp(bmpImage, plainImage);
-    if (status != READ_OK) {
-        printf("An error occurred while opening the BMP file! Reason: %d", status);
+    image rotatedImage = rotate(plainImage);
+
+    FILE* fileRotated = fopen(argv[2], "wb");
+    if (fileRotated == NULL)
+        return -1;
+
+    enum write_status writeStatus = to_bmp(fileRotated, &rotatedImage);
+    if (writeStatus != WRITE_OK) {
+        fprintf(stderr,"An error occurred while writing to BMP file! Reason:");
+        describe_write_status(writeStatus);
         exit(-2);
     }
 
-    char* outputFilePath = "C:\\Users\\chesn\\CLionProjects\\assignment-3-image-rotation\\solution\\src\\output1.bmp";
-//    image* rotatedImage = rotate(plainImage);
-    FILE* fileRotated = open_bmp(outputFilePath, "r+");
-
-    to_bmp(fileRotated, plainImage);
-
-    close_bmp(bmpImage);
-//    close_bmp(fileRotated);
-
+    fclose(bmpImage);
+    fclose(fileRotated);
+    free_image(&plainImage);
+    free_image(&rotatedImage);
     return 0;
 }

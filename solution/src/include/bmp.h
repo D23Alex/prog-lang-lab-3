@@ -1,8 +1,7 @@
 #include  <stdint.h>
-#pragma pack(push, 1)
 
-typedef struct bmp_header
-{
+
+typedef struct __attribute__((packed)) bmp_header  {
     uint16_t bfType;
     uint32_t bfileSize;
     uint32_t bfReserved;
@@ -19,5 +18,3 @@ typedef struct bmp_header
     uint32_t biClrUsed;
     uint32_t biClrImportant;
 } bmp_header;
-
-#pragma pack(pop)

@@ -1,5 +1,6 @@
-#include <include/image.h>
+#include <bits/types/FILE.h>
 #include <include/bmp.h>
+#include <include/image.h>
 
 typedef struct header {
     bmp_header bmpHeader;
@@ -11,7 +12,6 @@ enum read_status {
     READ_INVALID_SIGNATURE,
     READ_INVALID_HEADER,
     READ_INVALID_BITS,
-    READ_INVALID_IMG
 };
 
 enum write_status  {
@@ -19,13 +19,6 @@ enum write_status  {
     WRITE_ERROR
 };
 
-enum close_status {
-    CLOSE_OK = 0,
-    CLOSE_ERROR
-};
-
-FILE* open_bmp(const char* fileName, char* openMode);
-enum close_status close_bmp(FILE* in);
 header read_header(FILE* in);
 bmp_header set_header(uint64_t width, uint64_t height);
 enum read_status from_bmp( FILE* in, image* img );
